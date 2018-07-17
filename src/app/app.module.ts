@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GifsComponent } from './gifs/gifs.component';
+import { HttpModule } from '@angular/http';
 
 import { GiftubeApiService } from './giftube-api.service';
 
@@ -16,7 +17,8 @@ import { GiftubeApiService } from './giftube-api.service';
     GifsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [GiftubeApiService],
   bootstrap: [AppComponent]
