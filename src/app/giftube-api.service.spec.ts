@@ -1,15 +1,12 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { GiftubeApiService } from './giftube-api.service';
 
 describe('GiftubeApiService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [GiftubeApiService]
-    });
-  });
+  beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', inject([GiftubeApiService], (service: GiftubeApiService) => {
+  it('should be created', () => {
+    const service: GiftubeApiService = TestBed.get(GiftubeApiService);
     expect(service).toBeTruthy();
-  }));
+  });
 });
